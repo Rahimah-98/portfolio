@@ -1,0 +1,202 @@
+@import 'tailwindcss';
+
+@theme {
+  /* ---------- Colors ---------- */
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-border: var(--border);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* ---------- Font ---------- */
+
+  --font-sans: 'Inter', sans-serif;
+
+  /* ---------- Radius ---------- */
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* ---------- Shadows ---------- */
+
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.04);
+
+  --shadow-card-hover: 0 8px 24px rgb(15 23 42 / 0.07);
+}
+
+/* =========================================================
+   LIGHT MODE
+   ========================================================= */
+
+:root {
+  --background: #ffffff;
+  --foreground: #172033;
+
+  --card: #ffffff;
+  --card-foreground: #172033;
+
+  --surface: #f8fafc;
+  --surface-hover: #f1f5f9;
+
+  --border: #e2e8f0;
+
+  --primary: #5b5ce2;
+  --primary-hover: #4d4ecf;
+
+  --muted: #64748b;
+  --muted-foreground: #94a3b8;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+.dark {
+  --background: #0b1220;
+  --foreground: #f8fafc;
+
+  --card: #101a2b;
+  --card-foreground: #f8fafc;
+
+  --surface: #111b2d;
+  --surface-hover: #172338;
+
+  --border: #26344a;
+
+  --primary: #7c7df0;
+  --primary-hover: #9091f5;
+
+  --muted: #94a3b8;
+  --muted-foreground: #64748b;
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    margin: 0;
+
+    background-color: var(--background);
+    color: var(--foreground);
+
+    font-family: var(--font-sans);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    transition:
+      background-color 200ms ease,
+      color 200ms ease;
+  }
+
+  button,
+  a {
+    transition:
+      color 200ms ease,
+      background-color 200ms ease,
+      border-color 200ms ease,
+      opacity 200ms ease,
+      transform 200ms ease;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  ::selection {
+    background-color: var(--primary);
+    color: #ffffff;
+  }
+}
+
+/* =========================================================
+   COMPONENTS
+   ========================================================= */
+
+@layer components {
+  .theme-toggle {
+    @apply flex h-9 w-9 items-center justify-center rounded-full
+      border border-border
+      bg-surface
+      transition-colors duration-300
+      hover:bg-primary/10;
+  }
+  .eyebrow {
+    @apply flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em];
+  }
+  .glass {
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 30px
+      color-mix(in srgb, var(--color-primary) 50%, transparent);
+  }
+}
+
+/* =========================================================
+   CUSTOM UTILITIES
+   ========================================================= */
+
+/* Main content width */
+
+@utility container-width {
+  width: min(80% - 2rem, 52rem);
+  margin-inline: auto;
+}
+
+/* Standard portfolio section spacing */
+
+@utility section-padding {
+  padding-block: 5rem;
+}
+
+/* Minimal portfolio card */
+
+@utility portfolio-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background-color: var(--card);
+  box-shadow: var(--shadow-card);
+}
+
+/* Subtle card interaction */
+
+@utility portfolio-card-hover {
+  &:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+  }
+}
