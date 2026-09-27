@@ -1,21 +1,24 @@
 import { useContext } from 'react';
+import { Moon, Sun } from 'lucide-react';
 
 import { ThemeContext } from '../../context/theme/themeContext';
-
-import { InnerMoon } from '@theme-toggles/react';
-import '@theme-toggles/react/styles/inner-moon.css';
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <InnerMoon
-      toggled={theme === 'dark'}
-      onToggle={toggleTheme}
-      duration={750}
-      title='Toggle theme'
-      className='theme-toggle text-primary'
-    />
+    <button
+      type='button'
+      onClick={toggleTheme}
+      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+      title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+      className='theme-toggle'>
+      {theme === 'dark' ? (
+        <Sun size={20} strokeWidth={2} />
+      ) : (
+        <Moon size={20} strokeWidth={2} />
+      )}
+    </button>
   );
 };
 

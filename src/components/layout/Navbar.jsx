@@ -53,14 +53,10 @@ const Navbar = () => {
         sticky
         top-0
         z-50
-        border-b
-        border-border-light
         bg-surface-light/80
         backdrop-blur
         transition-colors
         duration-300
-        dark:border-border-dark
-        dark:bg-surface-dark/80
       '>
       <nav
         className='
