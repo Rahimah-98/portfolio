@@ -34,7 +34,6 @@
   /* ---------- Shadows ---------- */
 
   --shadow-card: 0 1px 2px rgb(15 23 42 / 0.04);
-
   --shadow-card-hover: 0 8px 24px rgb(15 23 42 / 0.07);
 }
 
@@ -100,10 +99,8 @@
   body {
     min-width: 320px;
     margin: 0;
-
     background-color: var(--background);
     color: var(--foreground);
-
     font-family: var(--font-sans);
 
     -webkit-font-smoothing: antialiased;
@@ -144,9 +141,8 @@
    ========================================================= */
 
 @layer components {
-  @layer components {
-    .theme-toggle {
-      @apply flex h-9 w-9 items-center justify-center
+  .theme-toggle {
+    @apply flex h-9 w-9 items-center justify-center
       rounded-full
       border border-border
       bg-surface
@@ -154,19 +150,36 @@
       transition-all duration-300
       hover:-translate-y-0.5
       hover:bg-primary/10;
-    }
   }
+
   .eyebrow {
-    @apply flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em];
+    @apply flex items-center gap-3
+      text-xs
+      font-semibold
+      uppercase
+      tracking-[0.18em]
+      text-primary;
   }
+
   .glass {
-    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    background-color: color-mix(
+      in srgb,
+      var(--color-surface) 50%,
+      transparent
+    );
+
     backdrop-filter: blur(16px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+
+    border: 1px solid color-mix(
+      in srgb,
+      var(--color-border) 50%,
+      transparent
+    );
   }
 
   .glow-text {
-    text-shadow: 0 0 30px
+    text-shadow:
+      0 0 30px
       color-mix(in srgb, var(--color-primary) 50%, transparent);
   }
 }
@@ -175,20 +188,14 @@
    CUSTOM UTILITIES
    ========================================================= */
 
-/* Main content width */
-
 @utility container-width {
-  width: min(80% - 2rem, 52rem);
+  width: min(90% - 2rem, 60rem);
   margin-inline: auto;
 }
 
-/* Standard portfolio section spacing */
-
 @utility section-padding {
-  padding-block: 5rem;
+  padding-block: 6.5rem;
 }
-
-/* Minimal portfolio card */
 
 @utility portfolio-card {
   border: 1px solid var(--border);
@@ -196,8 +203,6 @@
   background-color: var(--card);
   box-shadow: var(--shadow-card);
 }
-
-/* Subtle card interaction */
 
 @utility portfolio-card-hover {
   &:hover {

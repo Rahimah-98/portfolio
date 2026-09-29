@@ -4,44 +4,39 @@ const Hero = () => {
   return (
     <section
       id='home'
-      className='container-width mt-16 space-y-6 sm:mt-20 md:mt-22
-      '>
+      className='container-width relative py-20 sm:py-24 md:py-28'>
+      {/* Subtle background glow */}
       <div
-        className=' flex w-fit items-center gap-2 rounded-full border border-primary bg-primary/10 px-4 py-1
+        aria-hidden='true'
+        className='pointer-events-none absolute left-1/2 top-10 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl'
+      />
+
+      {/* Availability */}
+      <div
+        className='mb-8 flex w-fit items-center gap-2 rounded-full border border-primary/60 bg-primary/10 px-4 py-1.5
         '>
         <span className='h-2 w-2 shrink-0 rounded-full bg-green-400' />
 
-        <span
-          className=' text-[10px] font-medium uppercase tracking-wide text-muted sm:text-[11px]
-          '>
-          Open to work
+        <span className='text-[11px] font-medium uppercase tracking-[0.08em] text-muted'>
+          Available to work
         </span>
       </div>
 
-      <h1
-        className='w-full md:max-w-xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl
-        '>
+      {/* Heading */}
+      <h1 className='max-w-3xl text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl'>
         Hello, I'm <span className='text-primary'>Rahimah Ansari</span> a Web
         Developer
       </h1>
 
-      <div
-        className=' max-w-xl space-y-3 text-sm leading-6 text-muted sm:text-base
-        '>
-        <p>
-          — a web developer specializing in React, Next.js, and JavaScript. I
-          build scalable, performant web applications that users love.
-        </p>
+      {/* Description */}
+      <p className=' mt-6 max-w-2xl text-[15px] leading-7 text-muted sm:text-base'>
+        I’m a web developer specializing in React, Next.js, and JavaScript. I
+        build modern, scalable web applications with a focus on performance,
+        usability, and clean design.
+      </p>
 
-        <p>
-          — a web developer specializing in React, Next.js, and JavaScript. I
-          build scalable.
-        </p>
-      </div>
-
-      <div
-        className=' flex flex-col items-stretch gap-3 pt-2 sm:flex-row sm:items-center
-        '>
+      {/* Actions */}
+      <div className=' mt-12 flex flex-col gap-3 sm:flex-row sm:items-center'>
         <Button href='#projects' variant='primary' className='w-full sm:w-auto'>
           View My Projects
         </Button>

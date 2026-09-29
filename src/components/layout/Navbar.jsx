@@ -48,28 +48,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header
-      className='
-        sticky
-        top-0
-        z-50
-        bg-surface-light/80
-        backdrop-blur
-        transition-colors
-        duration-300
-      '>
-      <nav
-        className='
-          relative
-          flex
-          h-16
-          w-full
-          items-center
-          justify-between
-          px-6
-          md:container-width
-          md:px-0
-        '>
+    <header className='stickytop-0z-50bg-surface-light/80backdrop-blurtransition-colorsduration-300'>
+      <nav className=' relative flex h-16 w-full items-center justify-between px-6 md:container-width md:px-0'>
         {/* Logo */}
         <Logo />
 
@@ -84,31 +64,11 @@ const Navbar = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className={`
-                    relative
-                    py-2
-                    text-xs
-                    font-medium
-                    transition-colors
-                    duration-200
-                    ${
-                      isActive
-                        ? 'text-foreground'
-                        : 'text-muted hover:text-foreground'
-                    }
-                  `}>
+                  className={` relative py-2 text-xs font-medium transition-colors duration-200 ${isActive ? 'text-foreground' : 'text-muted hover:text-foreground'}`}>
                   {item.label}
 
                   {isActive && (
-                    <span
-                      className='
-                        absolute
-                        inset-x-0
-                        -bottom-1
-                        h-px
-                        bg-primary
-                      '
-                    />
+                    <span className=' absolute inset-x-0 -bottom-1 h-px bg-primary' />
                   )}
                 </a>
               );
@@ -128,18 +88,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen((prev) => !prev)}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
-            className='
-              flex
-              h-9
-              w-9
-              items-center
-              justify-center
-              rounded-md
-              text-muted
-              transition-colors
-              hover:bg-surface-hover
-              hover:text-foreground
-            '>
+            className=' flex h-9 w-9 items-center justify-center rounded-md text-muted transition-colors hover:bg-surface-hover hover:text-foreground'>
             {isMenuOpen ? (
               <X className='h-5 w-5' />
             ) : (
@@ -150,21 +99,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div
-            className='
-              absolute
-              left-0
-              right-0
-              top-full
-              z-50
-              rounded-b-md
-              border
-              border-border
-              bg-background
-              py-3
-              shadow-lg
-              md:hidden
-            '>
+          <div className=' absolute left-0 right-0 top-full z-50 rounded-b-md border border-border bg-background py-3 shadow-lg md:hidden'>
             <div className='flex flex-col'>
               {navItems.map((item) => {
                 const sectionId = item.href.slice(1);
@@ -175,12 +110,7 @@ const Navbar = () => {
                     key={item.label}
                     href={item.href}
                     onClick={handleNavClick}
-                    className={`
-                      px-4
-                      py-3
-                      text-sm
-                      font-medium
-                      transition-colors
+                    className={` px-4 py-3 text-sm font-medium transition-colors
                       ${
                         isActive
                           ? 'bg-primary/5 text-primary'
