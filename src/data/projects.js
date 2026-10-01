@@ -14,22 +14,17 @@ export const projects = [
     description:
       'An AI-powered to-do app that transforms ordinary tasks into fun, memorable reminders using different personalities and tones.',
 
-    tags: [
-      'React',
-      'Tailwind CSS',
-      'OpenRouter',
-      'LocalStorage',
-    ],
+    tags: ['React', 'Tailwind CSS', 'OpenRouter', 'LocalStorage'],
 
     featured: true,
 
     preview: {
-      src: '/projects/catchy-reminders.webp',
+      src: './projects/catchyReminders-d.png',
       alt: 'CatchyReminders AI-powered reminder application',
     },
 
-    liveUrl: '',
-    githubUrl: '',
+    liveUrl: 'https://catchy-reminders.pages.dev/',
+    githubUrl: 'https://github.com/Rahimah-98/catchy-reminders',
   },
 
   {
@@ -40,21 +35,17 @@ export const projects = [
     description:
       'A responsive developer portfolio built with React and Tailwind CSS, featuring dark and light themes, reusable components, and project showcases.',
 
-    tags: [
-      'React',
-      'Tailwind CSS',
-      'JavaScript',
-    ],
+    tags: ['React', 'Tailwind CSS', 'JavaScript'],
 
     featured: true,
 
     preview: {
-      src: '/projects/portfolio.webp',
+      src: '/projects/portfolio.png',
       alt: 'Rahimah Ansari personal portfolio website',
     },
 
-    liveUrl: '',
-    githubUrl: 'https://github.com/Rahimah-98/cw-react-portfolio',
+    liveUrl: 'https://rahimahansari-portfolio.netlify.app/',
+    githubUrl: 'https://github.com/Rahimah-98/portfolio',
   },
 
   {
@@ -65,12 +56,7 @@ export const projects = [
     description:
       'An AI-powered movie recommendation app using Supabase vector search and embeddings to find movies based on user preferences.',
 
-    tags: [
-      'React',
-      'Supabase',
-      'pgvector',
-      'OpenRouter',
-    ],
+    tags: ['React', 'Supabase', 'pgvector', 'OpenRouter'],
 
     featured: true,
 
@@ -91,12 +77,7 @@ export const projects = [
     description:
       'An AI-powered translation app that translates text between multiple languages with a simple interface and visual language flags.',
 
-    tags: [
-      'React',
-      'Tailwind CSS',
-      'OpenRouter',
-      'Cloudflare Worker',
-    ],
+    tags: ['React', 'Tailwind CSS', 'OpenRouter', 'Cloudflare Worker'],
 
     featured: true,
 

@@ -64,27 +64,49 @@ const About = () => {
           experiences. I enjoy turning ideas into clean, responsive interfaces
           and continuously improving my skills through real-world projects.
         </p>
+        
 
         {/* Contact details */}
-        <ul className='flex flex-col gap-4'>
+        <ul className='flex flex-col gap-3'>
           {contactDetails.map((detail) => {
             const Icon =
               Icons[detail.icon] ?? brandIcons[detail.icon] ?? Icons.Circle;
 
             const content = (
               <>
-                <Icon
-                  size={16}
-                  strokeWidth={1.8}
-                  className='shrink-0 text-primary'
-                />
+                <span
+                  className='
+                      flex
+                      h-9
+                      w-9
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-border
+                      bg-surface
+                      text-primary
+                      transition-all
+                      duration-300
+                      group-hover:border-primary/40
+                      group-hover:bg-primary/10
+                    '>
+                  <Icon
+                    size={16}
+                    strokeWidth={1.8}
+                    className='shrink-0 text-primary'
+                  />
+                </span>
 
-                <span className='text-sm text-muted'>{detail.label}</span>
+                <span className='text-sm text-muted transition-all duration-200 group-hover:text-foreground'>
+                  {detail.label}
+                </span>
               </>
             );
 
             return (
-              <li key={detail.id} className='flex items-center gap-3'>
+              <li key={detail.id} className='flex items-center gap-2'>
                 {detail.href ? (
                   <a
                     href={detail.href}
@@ -93,10 +115,8 @@ const About = () => {
                     className='
                       flex
                       items-center
-                      gap-3
-                      transition-colors
-                      duration-200
-                      hover:text-primary
+                      gap-2
+                      group
                     '>
                     {content}
                   </a>

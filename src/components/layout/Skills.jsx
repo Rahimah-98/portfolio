@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Layout, Server, Wrench } from 'lucide-react';
+import SkillCard from '../ui/SkillCard';
 
 const skillCategories = [
   {
@@ -34,64 +35,6 @@ const skillCategories = [
     ],
   },
 ];
-
-const SkillBar = ({ skill, animate }) => {
-  return (
-    <div>
-      <div className='mb-2 flex items-center justify-between gap-2 text-xs'>
-        <span className='truncate text-muted'>{skill.name}</span>
-
-        <span className='shrink-0 text-muted'>{skill.level}%</span>
-      </div>
-
-      <div className='h-1 overflow-hidden rounded-full bg-foreground/10'>
-        <div
-          className='h-full rounded-full transition-[width] duration-1000 ease-out'
-          style={{
-            width: animate ? `${skill.level}%` : '0%',
-            backgroundColor: skill.color,
-          }}
-        />
-      </div>
-    </div>
-  );
-};
-
-const SkillCard = ({ category, animate }) => {
-  const Icon = category.icon;
-
-  return (
-    <article
-      className='
-        portfolio-card
-        min-w-0
-        p-5
-        transition-all
-        duration-200
-        hover:-translate-y-0.5
-        hover:shadow-card-hover
-        sm:p-6
-      '>
-      <div className='mb-6 flex min-w-0 items-center gap-3'>
-        <Icon
-          className='h-5 w-5 shrink-0 text-primary'
-          strokeWidth={1.8}
-          aria-hidden='true'
-        />
-
-        <h3 className='truncate text-base font-semibold text-foreground'>
-          {category.title}
-        </h3>
-      </div>
-
-      <div className='space-y-4'>
-        {category.skills.map((skill) => (
-          <SkillBar key={skill.name} skill={skill} animate={animate} />
-        ))}
-      </div>
-    </article>
-  );
-};
 
 export const Skills = () => {
   const [animate, setAnimate] = useState(false);

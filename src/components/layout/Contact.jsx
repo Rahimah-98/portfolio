@@ -72,7 +72,7 @@ const Contact = () => {
             className='
               mt-5
               max-w-md
-              text-sm
+              text-[15px]
               leading-7
               text-muted
               sm:text-base
@@ -106,11 +106,7 @@ const Contact = () => {
                       group-hover:border-primary/40
                       group-hover:bg-primary/10
                     '>
-                    <Icon
-                      size={16}
-                      strokeWidth={1.8}
-                      aria-hidden='true'
-                    />
+                    <Icon size={16} strokeWidth={1.8} aria-hidden='true' />
                   </span>
 
                   <span
@@ -303,12 +299,7 @@ const Contact = () => {
               focus:ring-offset-background
             '>
             Send Message
-
-            <ArrowUpRight
-              size={16}
-              strokeWidth={2}
-              aria-hidden='true'
-            />
+            <ArrowUpRight size={16} strokeWidth={2} aria-hidden='true' />
           </button>
         </form>
       </div>
