@@ -49,44 +49,43 @@ export const projects = [
   },
 
   {
-    id: 'popchoice',
+    id: 'omnifood',
 
-    title: 'PopChoice',
+    title: 'OmniFood',
 
     description:
-      'An AI-powered movie recommendation app using Supabase vector search and embeddings to find movies based on user preferences.',
+      'A modern and responsive food delivery website called Omnifood, built with HTML and CSS while learning responsive design and frontend development fundamentals.',
 
-    tags: ['React', 'Supabase', 'pgvector', 'OpenRouter'],
+    tags: ['HTML', 'CSS'],
 
     featured: true,
 
     preview: {
-      src: '/projects/popchoice.webp',
-      alt: 'PopChoice AI movie recommendation application',
+      src: '/projects/omnifood.png',
+      alt: 'OmniFood',
     },
 
-    liveUrl: '',
-    githubUrl: '',
+    liveUrl: 'https://rahimah-98.github.io/HTML-CSS-07-Omnifood/',
+    githubUrl: 'https://github.com/Rahimah-98/HTML-CSS-07-Omnifood',
   },
-
   {
-    id: 'pollyglot',
+    id: 'schoolportal',
 
-    title: 'PollyGlot',
+    title: 'Aurora Academy',
 
     description:
-      'An AI-powered translation app that translates text between multiple languages with a simple interface and visual language flags.',
+      'This project allows students to enroll, view profiles, explore courses, and send messages to the school.',
 
-    tags: ['React', 'Tailwind CSS', 'OpenRouter', 'Cloudflare Worker'],
+    tags: ['HTML', 'CSS', 'JavaScript'],
 
     featured: true,
 
     preview: {
-      src: '/projects/pollyglot.webp',
-      alt: 'PollyGlot AI translation application',
+      src: '/projects/aurora.png',
+      alt: 'Aurora Academy',
     },
 
-    liveUrl: '',
-    githubUrl: '',
+    liveUrl: 'https://rahimah-98.github.io/school-portal/',
+    githubUrl: 'https://github.com/Rahimah-98/school-portal',
   },
 ];
