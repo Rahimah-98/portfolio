@@ -1,20 +1,46 @@
 import { LuGithub } from 'react-icons/lu';
+
 import ProjectPreview from './ProjectPreview';
 
 function ProjectCard({ project }) {
   return (
-    <article className='portfolio-card portfolio-card-hover group flex flex-col gap-5 overflow-hidden p-4 transition-all duration-30'>
-      <div className='relative'>
+    <article
+      className='
+    portfolio-card
+    portfolio-card-hover
+    group
+    flex
+    min-h-[450px]
+    flex-col
+    gap-5
+    overflow-hidden
+    p-4
+    transition-all
+    duration-300
+  '>
+      {/* Preview */}
+      <div className='relative shrink-0'>
         <ProjectPreview preview={project.preview} liveUrl={project.liveUrl} />
       </div>
 
+      {/* Content */}
       <div className='flex flex-1 flex-col'>
+        {/* Title */}
         <div className='flex items-start justify-between gap-3'>
-          <h3 className=' text-base font-semibold text-foreground transition-all duration-300 group-hover:text-primary'>
+          <h3
+            className='
+              text-base
+              font-semibold
+              text-foreground
+              transition-colors
+              duration-300
+              group-hover:text-primary
+            '>
             {project.title}
           </h3>
         </div>
 
+        {/* Description */}
         <p
           className='
             mt-2
@@ -26,7 +52,7 @@ function ProjectCard({ project }) {
         </p>
 
         {/* Technologies */}
-        <div className='mt-4 flex flex-wrap gap-2'>
+        <div className='mt-4 flex flex-wrap gap-2 pb-4'>
           {project.tags.map((tag) => (
             <span
               key={tag}
@@ -49,10 +75,11 @@ function ProjectCard({ project }) {
         {/* Actions */}
         <div
           className='
-            mt-5
+            mt-auto
             flex
-            items-center
-            gap-4
+            h-10
+            shrink-0
+            items-end
             border-t
             border-border
             pt-4
@@ -68,11 +95,11 @@ function ProjectCard({ project }) {
               text-sm
               font-medium
               text-primary
-              transition-all
-              duration-300
+              transition-colors
+              duration-200
               hover:text-primary-hover
             '>
-            Github
+            GitHub
             <LuGithub size={15} strokeWidth={1.8} aria-hidden='true' />
           </a>
         </div>

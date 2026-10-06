@@ -42,6 +42,11 @@ const About = () => {
         <span className='h-px w-16 bg-primary/70' />
       </div>
 
+      {/* Heading */}
+      <h2 className='mt-8 text-2xl font-bold tracking-tight text-foreground'>
+        A little bit about me
+      </h2>
+
       {/* Content */}
       <div
         className='
@@ -52,19 +57,23 @@ const About = () => {
           md:gap-16
         '>
         {/* About text */}
-        <p
-          className='
-            max-w-2xl
+        <div
+          className='max-w-2xl
             text-[15px]
             leading-7
             text-muted
-            sm:text-base
-          '>
-          I’m a web developer focused on building modern and useful web
-          experiences. I enjoy turning ideas into clean, responsive interfaces
-          and continuously improving my skills through real-world projects.
-        </p>
-        
+            sm:text-base space-y-2'>
+          <p>
+            I’m a web developer focused on building modern and useful web
+            experiences. I enjoy turning ideas into clean, responsive interfaces
+            and continuously improving my skills through real-world projects.
+          </p>
+          <p>
+            I’m a web developer focused on building modern and useful web
+            experiences. I enjoy turning ideas into clean, responsive interfaces
+            and continuously improving my skills through real-world projects.
+          </p>
+        </div>
 
         {/* Contact details */}
         <ul className='flex flex-col gap-3'>

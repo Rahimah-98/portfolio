@@ -154,8 +154,6 @@
   .theme-toggle {
     @apply flex h-9 w-9 items-center justify-center
       rounded-full
-      border border-border
-      bg-surface
       text-primary
       transition-all duration-300
       hover:-translate-y-0.5
