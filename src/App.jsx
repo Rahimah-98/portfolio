@@ -6,16 +6,37 @@ import Navbar from './components/layout/Navbar';
 import Projects from './components/layout/Projects';
 import { Skills } from './components/layout/Skills';
 
+import Reveal from './components/ui/Reveal';
+import ScrollToTop from './components/ui/ScrollToTop';
+
 function App() {
   return (
     <main className='bg-background text-foreground space-y-4'>
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+
+      <Reveal>
+        <Hero />
+      </Reveal>
+
+      <Reveal delay={100}>
+        <About />
+      </Reveal>
+
+      <Reveal delay={100}>
+        <Skills />
+      </Reveal>
+
+      <Reveal delay={100}>
+        <Projects />
+      </Reveal>
+
+      <Reveal delay={100}>
+        <Contact />
+      </Reveal>
+
       <Footer />
+
+      <ScrollToTop />
     </main>
   );
 }

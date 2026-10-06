@@ -5,11 +5,6 @@ const Hero = () => {
     <section
       id='home'
       className='container-width relative py-20 sm:py-24 md:py-28'>
-      {/* Subtle background glow */}
-      <div
-        aria-hidden='true'
-        className='pointer-events-none absolute left-1/2 top-10 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl'
-      />
 
       {/* Availability */}
       <div
@@ -41,12 +36,11 @@ const Hero = () => {
           View My Projects
         </Button>
 
-        <Button
-          href='/Rahimah-Ansari-CV.pdf'
-          variant='secondary'
-          icon='download'>
-          Download CV
-        </Button>
+        <a href='/cv/Rahimah-CV.pdf' download='Rahimah-CV.pdf'>
+          <Button type='button' variant='secondary' icon='download'>
+            Download CV
+          </Button>
+        </a>
       </div>
     </section>
   );
