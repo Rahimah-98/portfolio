@@ -5,7 +5,6 @@ const Hero = () => {
     <section
       id='home'
       className='container-width relative py-20 sm:py-24 md:py-28'>
-
       {/* Availability */}
       <div
         className='mb-8 flex w-fit items-center gap-2 rounded-full border border-primary/60 bg-primary/10 px-4 py-1.5
@@ -37,7 +36,11 @@ const Hero = () => {
         </Button>
 
         <a href='/cv/Rahimah-CV.pdf' download='Rahimah-CV.pdf'>
-          <Button type='button' variant='secondary' icon='download'>
+          <Button
+            type='button'
+            variant='secondary'
+            icon='download'
+            className='w-full sm:w-auto'>
             Download CV
           </Button>
         </a>
