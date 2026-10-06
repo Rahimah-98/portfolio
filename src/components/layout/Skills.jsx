@@ -64,7 +64,7 @@ export const Skills = () => {
     <section
       ref={sectionRef}
       id='skills'
-      className='container-width py-20 sm:py-24 md:py-28'>
+      className='container-width py-14 sm:py-28 md:py-22'>
       {/* Section label */}
       <div className='eyebrow'>
         <span>Skills</span>

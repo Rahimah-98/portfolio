@@ -20,6 +20,20 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
 
+  /* ---------- Technology Badge Colors ---------- */
+
+  --color-react-bg: var(--react-bg);
+  --color-react-border: var(--react-border);
+
+  --color-javascript-bg: var(--javascript-bg);
+  --color-javascript-border: var(--javascript-border);
+
+  --color-nextjs-bg: var(--nextjs-bg);
+  --color-nextjs-border: var(--nextjs-border);
+
+  --color-tailwind-bg: var(--tailwind-bg);
+  --color-tailwind-border: var(--tailwind-border);
+
   /* ---------- Font ---------- */
 
   --font-sans: 'Inter', sans-serif;
@@ -58,7 +72,25 @@
 
   --muted: #636b78;
   --muted-foreground: #94a3b8;
+
+  /* Technology badges */
+
+  --react-bg: #eefaff;
+  --react-border: #d5f2fc;
+
+  --javascript-bg: #fffaf0;
+  --javascript-border: #f8e8ae;
+
+  --nextjs-bg: #f4f5f7;
+  --nextjs-border: #e2e5e9;
+
+  --tailwind-bg: #edfafd;
+  --tailwind-border: #d4f1f5;
 }
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
 
 .dark {
   --background: #0b1220;
@@ -77,6 +109,20 @@
 
   --muted: #94a3b8;
   --muted-foreground: #64748b;
+
+  /* Technology badges */
+
+  --react-bg: #102b3a;
+  --react-border: #16465c;
+
+  --javascript-bg: #302c18;
+  --javascript-border: #5a5121;
+
+  --nextjs-bg: #1a202b;
+  --nextjs-border: #303b4d;
+
+  --tailwind-bg: #102d35;
+  --tailwind-border: #15505e;
 }
 
 /* =========================================================
@@ -132,18 +178,23 @@
   }
 }
 
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
 @keyframes float {
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
-    transform: translateY(10px);
+    transform: translateY(-5px);
   }
 }
 
 .float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }
 
 /* =========================================================

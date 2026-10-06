@@ -11,7 +11,7 @@ import ScrollToTop from './components/ui/ScrollToTop';
 
 function App() {
   return (
-    <main className='bg-background text-foreground space-y-4'>
+    <main className='bg-background text-foreground'>
       <Navbar />
 
       <Reveal>

@@ -57,7 +57,7 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder='Your name'
+              placeholder='Jane'
               maxLength={80}
               disabled={loading}
               aria-invalid={Boolean(errors.name)}
@@ -84,7 +84,7 @@ const ContactForm = () => {
               value={formData.lastName}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder='Your last name'
+              placeholder='Doe'
               maxLength={80}
               disabled={loading}
               aria-invalid={Boolean(errors.lastName)}
@@ -111,7 +111,7 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder='you@example.com'
+              placeholder='janedoe@gmail.com'
               maxLength={254}
               disabled={loading}
               aria-invalid={Boolean(errors.email)}

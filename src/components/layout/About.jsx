@@ -1,141 +1,108 @@
-import * as Icons from 'lucide-react';
-import { LuGithub, LuLinkedin } from 'react-icons/lu';
+import { Sparkles } from 'lucide-react';
+import {
+  SiTailwindcss,
+  SiReact,
+  SiJavascript,
+  SiNextdotjs,
+} from 'react-icons/si';
 
-const brandIcons = {
-  Github: LuGithub,
-  Linkedin: LuLinkedin,
-};
-
-const contactDetails = [
+const focusAreas = [
   {
-    id: 'location',
-    icon: 'MapPin',
-    label: 'Herat, Afghanistan',
-    href: null,
+    name: 'React',
+    icon: <SiReact />,
+    iconColor: 'text-[#22b8ed]',
+    background: 'bg-react-bg',
+    border: 'border-react-border',
   },
   {
-    id: 'email',
-    icon: 'Mail',
-    label: 'rahimaansari98@gmail.com',
-    href: 'mailto:rahimaansari98@gmail.com',
+    name: 'JavaScript',
+    icon: <SiJavascript />,
+    iconColor: 'text-[#f7df1e]',
+    background: 'bg-javascript-bg',
+    border: 'border-javascript-border',
   },
   {
-    id: 'linkedin',
-    icon: 'Linkedin',
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/',
+    name: 'Next.js',
+    icon: <SiNextdotjs />,
+    iconColor: 'text-foreground',
+    background: 'bg-nextjs-bg',
+    border: 'border-nextjs-border',
   },
   {
-    id: 'github',
-    icon: 'Github',
-    label: 'GitHub',
-    href: 'https://github.com/',
+    name: 'Tailwind CSS',
+    icon: <SiTailwindcss />,
+    iconColor: 'text-[#06b6d4]',
+    background: 'bg-tailwind-bg',
+    border: 'border-tailwind-border',
   },
 ];
 
 const About = () => {
   return (
-    <section id='about' className='container-width py-20 sm:py-24 md:py-28'>
+    <section id='about' className='container-width py-14 sm:py-18 md:py-22'>
       {/* Section label */}
       <div className='eyebrow'>
         <span>About me</span>
-        <span className='h-px w-16 bg-primary/70' />
+        <span className='h-px w-16 bg-primary/60' />
       </div>
 
-      {/* Heading */}
-      <h2 className='mt-8 text-2xl font-bold tracking-tight text-foreground'>
-        A little bit about me
-      </h2>
+      <div className='mt-8 grid gap-12 md:grid-cols-[1.25fr_1fr] md:items-end md:gap-16 lg:gap-20'>
+        <div>
+          <h2 className='mb-10 text-3xl font-bold leading-tight tracking-[-0.025em] text-foreground sm:text-4xl'>
+            About me
+          </h2>
 
-      {/* Content */}
-      <div
-        className='
-          mt-8
-          grid
-          gap-10
-          md:grid-cols-[1.7fr_1fr]
-          md:gap-16
-        '>
-        {/* About text */}
-        <div
-          className='max-w-2xl
-            text-[15px]
-            leading-7
-            text-muted
-            sm:text-base space-y-2'>
-          <p>
-            I’m a web developer focused on building modern and useful web
-            experiences. I enjoy turning ideas into clean, responsive interfaces
-            and continuously improving my skills through real-world projects.
-          </p>
-          <p>
-            I’m a web developer focused on building modern and useful web
-            experiences. I enjoy turning ideas into clean, responsive interfaces
-            and continuously improving my skills through real-world projects.
-          </p>
+          <div className='max-w-[760px] space-y-7 text-base leading-7 text-muted sm:text-[17px] sm:leading-[1.75]'>
+            <p>
+              I’m a web developer focused on building modern and useful web
+              experiences. I enjoy turning ideas into clean, responsive
+              interfaces and continuously improving my skills through real-world
+              projects.
+            </p>
+
+            <p>
+              I care about writing maintainable code, creating thoughtful user
+              experiences, and learning through building. My current focus is
+              React, JavaScript, and Next.js.
+            </p>
+          </div>
         </div>
 
-        {/* Contact details */}
-        <ul className='flex flex-col gap-3'>
-          {contactDetails.map((detail) => {
-            const Icon =
-              Icons[detail.icon] ?? brandIcons[detail.icon] ?? Icons.Circle;
+        <div className='float w-full rounded-xl border border-border bg-card p-7 shadow-card sm:p-8'>
+          <div className='flex items-center gap-3'>
+            <div className='flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary'>
+              <Sparkles className='h-5 w-5' strokeWidth={1.8} />
+            </div>
 
-            const content = (
-              <>
-                <span
-                  className='
-                      flex
-                      h-9
-                      w-9
-                      shrink-0
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-border
-                      bg-surface
-                      text-primary
-                      transition-all
-                      duration-300
-                      group-hover:border-primary/40
-                      group-hover:bg-primary/10
-                    '>
-                  <Icon
-                    size={16}
-                    strokeWidth={1.8}
-                    className='shrink-0 text-primary'
-                  />
+            <p className='text-xs font-semibold uppercase tracking-[0.1em] text-primary'>
+              Currently focused on
+            </p>
+          </div>
+
+          <div className='mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2'>
+            {focusAreas.map((item) => (
+              <div
+                key={item.name}
+                className={`flex min-h-10 items-center gap-3 rounded-full border px-4 py-2 transition-all duration-200 hover:-translate-y-0.5 ${item.background} ${item.border}`}>
+                <span className={`shrink-0 text-base ${item.iconColor}`}>
+                  {item.icon}
                 </span>
 
-                <span className='text-sm text-muted transition-all duration-200 group-hover:text-foreground'>
-                  {detail.label}
+                <span className='text-xs font-medium tracking-[-0.01em] text-muted'>
+                  {item.name}
                 </span>
-              </>
-            );
+              </div>
+            ))}
+          </div>
 
-            return (
-              <li key={detail.id} className='flex items-center gap-2'>
-                {detail.href ? (
-                  <a
-                    href={detail.href}
-                    target={detail.id === 'email' ? undefined : '_blank'}
-                    rel={detail.id === 'email' ? undefined : 'noreferrer'}
-                    className='
-                      flex
-                      items-center
-                      gap-2
-                      group
-                    '>
-                    {content}
-                  </a>
-                ) : (
-                  content
-                )}
-              </li>
-            );
-          })}
-        </ul>
+          <div className='mt-10 flex items-center gap-3'>
+            <span className='h-px flex-1 bg-primary/20' />
+            <span className='whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.22em] text-muted-foreground'>
+              Tools that power my work
+            </span>
+            <span className='h-px flex-1 bg-primary/20' />
+          </div>
+        </div>
       </div>
     </section>
   );

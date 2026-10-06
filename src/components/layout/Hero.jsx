@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id='home'
-      className='container-width relative py-20 sm:py-24 md:py-28'>
+      className='container-width relative py-16 sm:py-20 md:py-24'>
       {/* Availability */}
       <div
         className='mb-8 flex w-fit items-center gap-2 rounded-full border border-primary/60 bg-primary/10 px-4 py-1.5

@@ -3,7 +3,7 @@ import ContactInfo from './ContactInfo';
 
 const Contact = () => {
   return (
-    <section id='contact' className='container-width py-20 sm:py-24 md:py-28'>
+    <section id='contact' className='container-width py-14 sm:py-18 md:py-22'>
       <div className='eyebrow'>
         <span>Contact</span>
         <span className='h-px w-16 bg-primary/70' />
