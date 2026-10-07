@@ -12,21 +12,21 @@ const Projects = () => {
       </div>
 
       {/* Section heading */}
-      <div className='mt-8'>
+      <div className='my-8'>
         <h2 className='text-2xl font-bold tracking-tight text-foreground'>
           My Projects
         </h2>
       </div>
 
       {/* Project grid */}
-      <div className='mt-8 grid gap-5 sm:grid-cols-2'>
+      <div className='grid gap-5 sm:grid-cols-2'>
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
 
       {/* View all projects */}
-      <div className='mt-10 flex justify-center'>
+      <div className='mt-10 flex justify-center animate-pulse duration-300 transition-all'>
         <a
           href={projectsSection.viewAllHref}
           className='

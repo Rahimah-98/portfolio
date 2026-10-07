@@ -54,13 +54,13 @@ const About = () => {
         <span className='h-px w-16 bg-primary/60' />
       </div>
 
-      <div className='mt-8 grid gap-12 lg:grid-cols-2 md:items-end md:gap-16 lg:gap-20'>
+      <div className='grid gap-10 lg:grid-cols-[1fr_0.75fr] md:items-end md:gap-14 lg:gap-18'>
         <div>
-          <h2 className='mb-10 text-3xl font-bold leading-tight tracking-[-0.025em] text-foreground sm:text-4xl'>
+          <h2 className='my-8 mb-6 text-3xl font-bold leading-tight tracking-[-0.025em] text-foreground sm:text-4xl'>
             About me
           </h2>
 
-          <div className='max-w-[760px] space-y-7 text-base leading-7 text-muted sm:text-[17px] sm:leading-[1.75]'>
+          <div className='max-w-[760px] text-justify md:ml-4 space-y-4 text-base leading-5 text-muted sm:text-[16px] sm:leading-[1.75]'>
             <p>
               I’m a web developer focused on building modern and useful web
               experiences. I enjoy turning ideas into clean, responsive
@@ -76,7 +76,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className='float w-full rounded-xl border border-border bg-card p-7 shadow-card sm:p-8'>
+        <div className='float w-full rounded-xl border border-border bg-card p-4 shadow-card sm:p-6'>
           <div className='flex items-center gap-3'>
             <div className='flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary'>
               <Sparkles className='h-5 w-5' strokeWidth={1.8} />

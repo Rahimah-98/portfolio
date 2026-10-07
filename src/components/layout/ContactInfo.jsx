@@ -30,11 +30,11 @@ const contactDetails = [
 const ContactInfo = () => {
   return (
     <div>
-      <h2 className='max-w-md text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl'>
+      <h2 className='my-8 max-w-md text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl'>
         Let's work together.
       </h2>
 
-      <p className='mt-5 max-w-md text-[15px] leading-7 text-muted sm:text-base'>
+      <p className='max-w-md text-[15px] leading-7 text-muted sm:text-base'>
         Have a project in mind, an opportunity, or simply want to connect? I'd
         love to hear from you.
       </p>

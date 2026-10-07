@@ -72,12 +72,12 @@ export const Skills = () => {
       </div>
 
       {/* Heading */}
-      <h2 className='mt-8 text-2xl font-bold tracking-tight text-foreground'>
+      <h2 className='my-8 text-2xl font-bold tracking-tight text-foreground'>
         Skills I've Built
       </h2>
 
       {/* Skill cards */}
-      <div className='mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
         {skillCategories.map((category) => (
           <SkillCard
             key={category.title}
