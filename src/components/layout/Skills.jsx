@@ -77,7 +77,7 @@ export const Skills = () => {
       </h2>
 
       {/* Skill cards */}
-      <div className='mt-8 grid gap-4 md:grid-cols-3'>
+      <div className='mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
         {skillCategories.map((category) => (
           <SkillCard
             key={category.title}

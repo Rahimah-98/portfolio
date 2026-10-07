@@ -39,7 +39,7 @@ const ContactInfo = () => {
         love to hear from you.
       </p>
 
-      <ul className='mt-8 space-y-4'>
+      <ul className='w-[80%] lg:w-full mt-8 flex items-start justify-normal gap-6 flex-wrap lg:space-y-4 lg:block'>
         {contactDetails.map((detail) => {
           const Icon = detail.icon;
 

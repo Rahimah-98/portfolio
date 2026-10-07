@@ -34,6 +34,9 @@
   --color-tailwind-bg: var(--tailwind-bg);
   --color-tailwind-border: var(--tailwind-border);
 
+  --color-github-bg: var(--github-bg);
+  --color-github-border: var(--github-border);
+
   /* ---------- Font ---------- */
 
   --font-sans: 'Inter', sans-serif;
@@ -86,6 +89,9 @@
 
   --tailwind-bg: #edfafd;
   --tailwind-border: #d4f1f5;
+
+  --github-bg: #e3e6e4;
+  --github-border: #7d7d7d;
 }
 
 /* =========================================================
@@ -123,6 +129,9 @@
 
   --tailwind-bg: #102d35;
   --tailwind-border: #15505e;
+
+  --github-bg: #19191a;
+  --github-border: #64739c;
 }
 
 /* =========================================================

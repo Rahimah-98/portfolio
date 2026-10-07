@@ -4,6 +4,7 @@ import {
   SiReact,
   SiJavascript,
   SiNextdotjs,
+  SiGithub,
 } from 'react-icons/si';
 
 const focusAreas = [
@@ -35,6 +36,13 @@ const focusAreas = [
     background: 'bg-tailwind-bg',
     border: 'border-tailwind-border',
   },
+  {
+    name: 'Github',
+    icon: <SiGithub />,
+    iconColor: 'text-foreground',
+    background: 'bg-github-bg',
+    border: 'border-github-border',
+  },
 ];
 
 const About = () => {
@@ -46,7 +54,7 @@ const About = () => {
         <span className='h-px w-16 bg-primary/60' />
       </div>
 
-      <div className='mt-8 grid gap-12 md:grid-cols-[1.25fr_1fr] md:items-end md:gap-16 lg:gap-20'>
+      <div className='mt-8 grid gap-12 lg:grid-cols-2 md:items-end md:gap-16 lg:gap-20'>
         <div>
           <h2 className='mb-10 text-3xl font-bold leading-tight tracking-[-0.025em] text-foreground sm:text-4xl'>
             About me
@@ -79,11 +87,11 @@ const About = () => {
             </p>
           </div>
 
-          <div className='mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2'>
+          <div className='mt-8 flex items-center justify-center flex-wrap gap-3'>
             {focusAreas.map((item) => (
               <div
                 key={item.name}
-                className={`flex min-h-10 items-center gap-3 rounded-full border px-4 py-2 transition-all duration-200 hover:-translate-y-0.5 ${item.background} ${item.border}`}>
+                className={`flex min-h-10 items-center gap-2 rounded-full border px-4 py-2 transition-all duration-200 hover:-translate-y-0.5 ${item.background} ${item.border}`}>
                 <span className={`shrink-0 text-base ${item.iconColor}`}>
                   {item.icon}
                 </span>
