@@ -1,6 +1,7 @@
-import { ArrowRight } from 'lucide-react';
+// import { ArrowRight } from 'lucide-react';
 import ProjectCard from './ProjectCard';
-import { projects, projectsSection } from '../../data/projects';
+import { projects } from '../../data/projects';
+// import { projectsSection } from '../../data/projects';
 
 const Projects = () => {
   return (
@@ -26,7 +27,8 @@ const Projects = () => {
       </div>
 
       {/* View all projects */}
-      <div className='mt-10 flex justify-center animate-pulse duration-300 transition-all'>
+      {/* Temporarily commented out. Uncomment when more projects are added. */}
+      {/* <div className='mt-10 flex justify-center animate-pulse duration-300 transition-all'>
         <a
           href={projectsSection.viewAllHref}
           className='
@@ -54,7 +56,7 @@ const Projects = () => {
             '
           />
         </a>
-      </div>
+      </div> */}
     </section>
   );
 };

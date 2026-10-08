@@ -1,10 +1,12 @@
-import About from './components/layout/About';
-import Contact from './components/layout/Contact';
-import Footer from './components/layout/Footer';
-import Hero from './components/layout/Hero';
+import About from './components/sections/About';
+import Contact from './components/sections/Contact';
+import Hero from './components/sections/Hero';
+import Projects from './components/sections/Projects';
+
+import { Skills } from './components/sections/Skills';
+
 import Navbar from './components/layout/Navbar';
-import Projects from './components/layout/Projects';
-import { Skills } from './components/layout/Skills';
+import Footer from './components/layout/Footer';
 
 import Reveal from './components/ui/Reveal';
 import ScrollToTop from './components/ui/ScrollToTop';
@@ -19,15 +21,15 @@ function App() {
       </Reveal>
 
       <Reveal delay={100}>
+        <Projects />
+      </Reveal>
+
+      <Reveal delay={100}>
         <About />
       </Reveal>
 
       <Reveal delay={100}>
         <Skills />
-      </Reveal>
-
-      <Reveal delay={100}>
-        <Projects />
       </Reveal>
 
       <Reveal delay={100}>

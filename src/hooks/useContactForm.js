@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { sendContactEmail } from '../utils/emailService';
+import { sendContactEmail } from '../services/emailService';
 
 import {
   emptyForm,

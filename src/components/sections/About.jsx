@@ -54,24 +54,33 @@ const About = () => {
         <span className='h-px w-16 bg-primary/60' />
       </div>
 
-      <div className='grid gap-10 lg:grid-cols-[1fr_0.75fr] md:items-end md:gap-14 lg:gap-18'>
+      <div className='grid gap-10 grid-cols-1 md:items-end md:gap-14 lg:gap-18'>
         <div>
           <h2 className='my-8 mb-6 text-3xl font-bold leading-tight tracking-[-0.025em] text-foreground sm:text-4xl'>
             About me
           </h2>
 
-          <div className='max-w-[760px] text-justify md:ml-4 space-y-4 text-base leading-5 text-muted sm:text-[16px] sm:leading-[1.75]'>
+          <div className='text-justify md:ml-4 space-y-4 text-base leading-5 text-muted sm:text-[16px] sm:leading-[1.75]'>
             <p>
-              I’m a web developer focused on building modern and useful web
-              experiences. I enjoy turning ideas into clean, responsive
-              interfaces and continuously improving my skills through real-world
-              projects.
+              I'm a web developer with around two years of experience building
+              modern and responsive web applications. My current focus is
+              frontend development, particularly JavaScript and React, where I
+              enjoy turning ideas into clean, intuitive, and practical user
+              interfaces.
             </p>
 
             <p>
-              I care about writing maintainable code, creating thoughtful user
-              experiences, and learning through building. My current focus is
-              React, JavaScript, and Next.js.
+              I also have experience with Node.js, Express.js, and MongoDB,
+              giving me a broader understanding of how frontend and backend
+              systems work together. I'm also developing my skills in
+              integrating AI into web applications, with hands-on experience
+              working with AI APIs.
+            </p>
+            <p>
+              I'm currently expanding my knowledge of Next.js while continuing
+              to strengthen my JavaScript and React skills through real-world
+              projects. I enjoy learning by building, solving problems, and
+              improving with every project.
             </p>
           </div>
         </div>

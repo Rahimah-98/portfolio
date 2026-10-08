@@ -94,10 +94,9 @@ function ProjectCard({ project }) {
               gap-1.5
               text-sm
               font-medium
-              text-primary
-              transition-colors
-              duration-200
-              hover:text-primary-hover
+              text-primary 
+              transition-all duration-300 
+              hover:text-primary-hover hover:scale-105
             '>
             GitHub
             <LuGithub size={15} strokeWidth={1.8} aria-hidden='true' />

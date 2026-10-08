@@ -71,7 +71,7 @@
   --border: #e0e3e8;
 
   --primary: #5b5ce2;
-  --primary-hover: #4d4ecf;
+  --primary-hover: #6b6cff;
 
   --muted: #636b78;
   --muted-foreground: #94a3b8;
@@ -90,8 +90,8 @@
   --tailwind-bg: #edfafd;
   --tailwind-border: #d4f1f5;
 
-  --github-bg: #e3e6e4;
-  --github-border: #7d7d7d;
+  --github-bg: #f3f7f5;
+  --github-border: #c2c2c2;
 }
 
 /* =========================================================
