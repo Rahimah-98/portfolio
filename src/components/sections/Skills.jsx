@@ -36,7 +36,7 @@ const skillCategories = [
   },
 ];
 
-export const Skills = () => {
+const Skills = () => {
   const [animate, setAnimate] = useState(false);
   const sectionRef = useRef(null);
 
@@ -89,3 +89,5 @@ export const Skills = () => {
     </section>
   );
 };
+
+export default Skills;
