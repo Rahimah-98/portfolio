@@ -21,15 +21,15 @@ function App() {
       </Reveal>
 
       <Reveal delay={100}>
-        <Projects />
-      </Reveal>
-
-      <Reveal delay={100}>
         <About />
       </Reveal>
 
       <Reveal delay={100}>
         <Skills />
+      </Reveal>
+      
+      <Reveal delay={100}>
+        <Projects />
       </Reveal>
 
       <Reveal delay={100}>
